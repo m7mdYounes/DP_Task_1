@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Task_1.Models.Receipts>
+
+@{
+    ViewData["Title"] = "GridView";
+   
+}
+
+<h1>Grid View</h1>
+<a asp-action="DownloadXlsx" class="btn btn-primary">Download as XLSX</a>
+
+<table class="table" style="white-space:nowrap; text-align:center">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.businessUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.receiptMethodId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remittanceBank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remittanceBankAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.receiptNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.receiptAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.conversionRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.conversionRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customerAccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customerSiteNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.invoiceNumberReference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.invoiceAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.businessUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiptMethodId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remittanceBank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remittanceBankAccount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiptNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiptAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.conversionRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.conversionRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customerAccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customerSiteNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.invoiceNumberReference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.invoiceAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comments)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
